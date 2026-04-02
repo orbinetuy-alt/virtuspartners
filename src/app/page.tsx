@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Somos from "@/components/Somos";
 import Servicios from "@/components/Servicios";
 import Contacto from "@/components/Contacto";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Somos />
       <Servicios />
       <Contacto />
+      <Footer />
     </div>
   );
 }
