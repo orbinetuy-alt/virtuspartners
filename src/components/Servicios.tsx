@@ -39,6 +39,13 @@ const services = [
     description:
       "Gestionamos todos los trámites y despachos aduaneros con agilidad y precisión, asegurando el cumplimiento de las regulaciones vigentes.",
   },
+
+  {
+    number: "07",
+    title:"Análisis de inteligencia comercial",
+    description:
+      "Realizamos análisis de inteligencia comercial para identificar oportunidades de mercado, evaluar la competencia y diseñar estrategias efectivas de entrada o expansión.",
+  },
 ];
 
 export default function Servicios() {

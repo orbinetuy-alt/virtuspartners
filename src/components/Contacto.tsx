@@ -6,7 +6,7 @@ import Image from "next/image";
 const contactInfo = [
   {
     label: "Teléfono",
-    value: "+595 21 234 5678",
+    value: "+595 994 543 918",
     sub: "Lun–Vie, 8:00 – 18:00",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
@@ -26,7 +26,7 @@ const contactInfo = [
   },
   {
     label: "Dirección",
-    value: "Av. España 1234, Piso 8",
+    value: "Avenida Dr. Guido Boggiani 5465. Escritorio 1104",
     sub: "Asunción, Paraguay",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">

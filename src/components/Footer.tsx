@@ -15,6 +15,7 @@ const services = [
   "Asesoramiento en Logística",
   "Régimen Maquila",
   "Trámites y Despachos Aduaneros",
+  "Análisis de inteligencia comercial",
 ];
 
 export default function Footer() {
@@ -104,7 +105,7 @@ export default function Footer() {
               <ul className="flex flex-col gap-4 text-sm font-light text-white/55">
                 <li className="flex flex-col gap-0.5">
                   <span className="text-[#C9A55A] text-[10px] font-semibold tracking-widest uppercase">Teléfono</span>
-                  <span>+595 21 234 5678</span>
+                  <span>+595 994 543 918</span>
                 </li>
                 <li className="flex flex-col gap-0.5">
                   <span className="text-[#C9A55A] text-[10px] font-semibold tracking-widest uppercase">Email</span>
@@ -112,7 +113,7 @@ export default function Footer() {
                 </li>
                 <li className="flex flex-col gap-0.5">
                   <span className="text-[#C9A55A] text-[10px] font-semibold tracking-widest uppercase">Dirección</span>
-                  <span>Av. España 1234, Piso 8<br />Asunción, Paraguay</span>
+                  <span>Avenida Dr. Guido Boggiani 5465. Escritorio 1104<br />Asunción, Paraguay</span>
                 </li>
               </ul>
             </div>
