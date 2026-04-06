@@ -15,9 +15,9 @@ const services = [
   },
   {
     number: "03",
-    title: "Asesoramiento Contable e Impositivo",
+    title: "Análisis de inteligencia comercial",
     description:
-      "Acompañamos la gestión contable e impositiva con soluciones precisas y actualizadas según la normativa local e internacional.",
+      "Realizamos análisis de inteligencia comercial para identificar oportunidades de mercado, evaluar la competencia y diseñar estrategias efectivas de entrada o expansión.",
   },
   {
     number: "04",
@@ -40,9 +40,9 @@ const services = [
 
   {
     number: "07",
-    title:"Análisis de inteligencia comercial",
+    title: "Asesoramiento Contable e Impositivo",
     description:
-      "Realizamos análisis de inteligencia comercial para identificar oportunidades de mercado, evaluar la competencia y diseñar estrategias efectivas de entrada o expansión.",
+      "Acompañamos la gestión contable e impositiva con soluciones precisas y actualizadas según la normativa local e internacional.",
   },
 ];
 
