@@ -39,14 +39,25 @@ const contactInfo = [
 
 export default function Contacto() {
   const [form, setForm] = useState({ nombre: "", empresa: "", email: "", telefono: "", mensaje: "" });
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<"idle" | "loading" | "sent" | "error">("idle");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true);
+    setStatus("loading");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error();
+      setStatus("sent");
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -80,7 +91,7 @@ export default function Contacto() {
             {/* Gold top line */}
             <div className="w-10 h-0.5 bg-[#C9A55A] mb-8" />
 
-            {sent ? (
+            {status === "sent" ? (
               <div className="flex flex-col items-center justify-center py-16 gap-4">
                 <div className="w-14 h-14 rounded-full border-2 border-[#C9A55A] flex items-center justify-center text-[#C9A55A] text-2xl">✓</div>
                 <p className="text-neutral-800 font-semibold text-lg text-center">Mensaje enviado</p>
@@ -163,10 +174,16 @@ export default function Contacto() {
 
                 <button
                   type="submit"
-                  className="self-start bg-[#17458F] text-white text-[11px] font-bold tracking-[0.2em] uppercase px-10 py-4 hover:bg-[#0f3270] transition-colors duration-200 mt-1"
+                  disabled={status === "loading"}
+                  className="self-start bg-[#17458F] text-white text-[11px] font-bold tracking-[0.2em] uppercase px-10 py-4 hover:bg-[#0f3270] transition-colors duration-200 mt-1 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Enviar mensaje
+                  {status === "loading" ? "Enviando..." : "Enviar mensaje"}
                 </button>
+                {status === "error" && (
+                  <p className="text-red-500 text-sm mt-1">
+                    Hubo un error al enviar el mensaje. Por favor intenta nuevamente.
+                  </p>
+                )}
               </form>
             )}
           </div>
