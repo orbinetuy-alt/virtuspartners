@@ -15,7 +15,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="w-full bg-white">
+    <header className="w-full bg-white sticky top-0 z-50 shadow-sm">
       <div className="mx-auto flex items-center justify-between px-6 md:px-12 py-5 md:py-6">
         {/* Logo */}
         <Link href="/" className="flex items-center">
@@ -26,6 +26,7 @@ export default function Header() {
             height={38}
             priority
             className="object-contain"
+            style={{ height: "auto" }}
           />
         </Link>
 
